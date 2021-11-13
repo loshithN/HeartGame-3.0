@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#4a3c3ca3" layoutX="205.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heart Game 3.0">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Text>
+      <Text fill="#4a3c3ca3" layoutX="324.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#4a3c3ca3" layoutX="324.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a new session" wrappingWidth="185.8583984375">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#4a3c3ca3" layoutX="324.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Text>
+      <TextField layoutX="389.0" layoutY="303.0" prefHeight="26.0" prefWidth="152.0" />
+      <BottomNavigationButton layoutX="395.0" layoutY="383.0" text="Create session" />
+      <Text fill="#4a3c3ca3" layoutX="326.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Text>
+      <CheckBox disable="true" layoutX="483.0" layoutY="337.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="95.0" text="Availability" textFill="#4a3c3c" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font size="11.0" />
+         </font></CheckBox>
+      <TextField disable="true" layoutX="389.0" layoutY="209.0" text="System date" />
+      <TextField disable="true" layoutX="389.0" layoutY="257.0" text="System Time" />
+      <Text fill="#4a3c3ca3" layoutX="215.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Session Manager" wrappingWidth="185.8583984375">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#4a3c3ca3" layoutX="60.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as" wrappingWidth="82.8583984375">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#4a3c3ca3" layoutX="34.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#4a3c3ca3" layoutX="36.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Text>
+      <BottomNavigationButton layoutX="92.0" layoutY="383.0" text="Load session" />
+      <DatePicker layoutX="98.0" layoutY="210.0" />
+      <Text fill="#4a3c3ca3" layoutX="34.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Load session" wrappingWidth="185.8583984375">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <ListView layoutX="95.0" layoutY="270.0" prefHeight="90.0" prefWidth="186.0" />
+      <Separator layoutX="286.0" layoutY="136.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="14.0" />
+      <ChoiceBox layoutX="98.0" layoutY="267.0" prefHeight="26.0" prefWidth="180.0" />
+      <Separator layoutX="29.0" layoutY="81.0" prefHeight="3.0" prefWidth="530.0" />
+   </children>
+</AnchorPane>

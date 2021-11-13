@@ -1,0 +1,213 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 100663296 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3466), pid=7440, tid=9500
+#
+# JRE version:  (16.0.2+7) (build )
+# Java VM: OpenJDK 64-Bit Server VM (16.0.2+7-67, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --module-path=C:\Program Files\Java\javafx-sdk-17.0.1\lib --add-modules=javafx.controls,javafx.fxml -Dfile.encoding=Cp1252 --module-path=C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx-swt.jar;C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx.base.jar;C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx.controls.jar;C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx.fxml.jar;C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx.graphics.jar;C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx.media.jar;C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx.swing.jar;C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx.web.jar;C:\Users\USERPC_071019\.p2\pool\plugins\org.eclipse.fx.ide.css.jfx8_3.7.0.202010120832.jar;C:\Users\USERPC_071019\Desktop\Breo\CIS\Project\jfoenix-9.0.10.jar -XX:+ShowCodeDetailsInExceptionMessages Main.GUI
+
+Host: Intel(R) Core(TM) i5-3230M CPU @ 2.60GHz, 4 cores, 5G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1320)
+Time: Tue Nov  9 16:14:09 2021 Sri Lanka Standard Time elapsed time: 0.078215 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000028237fbdd60):  JavaThread "Unknown thread" [_thread_in_vm, id=9500, stack(0x000000bbc4800000,0x000000bbc4900000)]
+
+Stack: [0x000000bbc4800000,0x000000bbc4900000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6681ca]
+V  [jvm.dll+0x7c9e69]
+V  [jvm.dll+0x7cb61e]
+V  [jvm.dll+0x7cbc73]
+V  [jvm.dll+0x242c55]
+V  [jvm.dll+0x664f89]
+V  [jvm.dll+0x659b75]
+V  [jvm.dll+0x2fbfbb]
+V  [jvm.dll+0x3031b6]
+V  [jvm.dll+0x35299e]
+V  [jvm.dll+0x352bcf]
+V  [jvm.dll+0x2d3028]
+V  [jvm.dll+0x2d4264]
+V  [jvm.dll+0x79c741]
+V  [jvm.dll+0x360791]
+V  [jvm.dll+0x77a3f0]
+V  [jvm.dll+0x3e4e8f]
+V  [jvm.dll+0x3e6961]
+C  [jli.dll+0x52fb]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffaa8a2cbb8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000028237ff83e0 GCTaskThread "GC Thread#0" [stack: 0x000000bbc4900000,0x000000bbc4a00000] [id=13060]
+  0x00000282380051a0 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000bbc4a00000,0x000000bbc4b00000] [id=8436]
+  0x0000028238006eb0 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000bbc4b00000,0x000000bbc4c00000] [id=6040]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffaa8203ee7]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000028237fb9fd0] Heap_lock - owner thread: 0x0000028237fbdd60
+
+Heap address: 0x00000000a1c00000, size: 1508 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x00000000a1c00000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffaa85e1eed]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.017 Loaded shared library C:\Users\USERPC_071019\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff6ca650000 - 0x00007ff6ca65e000 	C:\Users\USERPC_071019\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre\bin\javaw.exe
+0x00007ffafe390000 - 0x00007ffafe585000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffaf6a30000 - 0x00007ffaf6a45000 	C:\Program Files\Avast Software\Avast\aswhook.dll
+0x00007ffafd060000 - 0x00007ffafd11e000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffafbf50000 - 0x00007ffafc218000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffafbb40000 - 0x00007ffafbc40000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffaef030000 - 0x00007ffaef048000 	C:\Users\USERPC_071019\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre\bin\jli.dll
+0x00007ffafd6b0000 - 0x00007ffafd851000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffafbe70000 - 0x00007ffafbe92000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffadea00000 - 0x00007ffadea19000 	C:\Users\USERPC_071019\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre\bin\VCRUNTIME140.dll
+0x00007ffafd570000 - 0x00007ffafd59b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffafbc40000 - 0x00007ffafbd4b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffafbda0000 - 0x00007ffafbe3d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffaeffc0000 - 0x00007ffaf025a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffafe120000 - 0x00007ffafe1be000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffafd540000 - 0x00007ffafd570000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffaeefa0000 - 0x00007ffaeefac000 	C:\Users\USERPC_071019\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre\bin\vcruntime140_1.dll
+0x00007ffac7830000 - 0x00007ffac78c1000 	C:\Users\USERPC_071019\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre\bin\msvcp140.dll
+0x00007ffaa7f20000 - 0x00007ffaa8acb000 	C:\Users\USERPC_071019\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre\bin\server\jvm.dll
+0x00007ffafd2c0000 - 0x00007ffafd36c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffafe080000 - 0x00007ffafe11b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffafd120000 - 0x00007ffafd24a000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffafd250000 - 0x00007ffafd258000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffaec320000 - 0x00007ffaec329000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffafd990000 - 0x00007ffafd9fb000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffaf49c0000 - 0x00007ffaf49e7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffaf6a10000 - 0x00007ffaf6a1a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffaf99b0000 - 0x00007ffaf99c2000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffaef020000 - 0x00007ffaef02a000 	C:\Users\USERPC_071019\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre\bin\jimage.dll
+0x00007ffaf54f0000 - 0x00007ffaf56d4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffaf54c0000 - 0x00007ffaf54ec000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffafbab0000 - 0x00007ffafbb33000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffadea50000 - 0x00007ffadea75000 	C:\Users\USERPC_071019\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\USERPC_071019\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre\bin;C:\WINDOWS\SYSTEM32;C:\Program Files\Avast Software\Avast;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Users\USERPC_071019\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre\bin\server
+
+VM Arguments:
+jvm_args: --module-path=C:\Program Files\Java\javafx-sdk-17.0.1\lib --add-modules=javafx.controls,javafx.fxml -Dfile.encoding=Cp1252 --module-path=C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx-swt.jar;C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx.base.jar;C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx.controls.jar;C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx.fxml.jar;C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx.graphics.jar;C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx.media.jar;C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx.swing.jar;C:\Program Files\Java\javafx-sdk-17.0.1\lib\javafx.web.jar;C:\Users\USERPC_071019\.p2\pool\plugins\org.eclipse.fx.ide.css.jfx8_3.7.0.202010120832.jar;C:\Users\USERPC_071019\Desktop\Breo\CIS\Project\jfoenix-9.0.10.jar -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: Main.GUI
+java_class_path (initial): C:\Users\USERPC_071019\291021\HeartGame\bin
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 100663296                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1581252608                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 1581252608                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:/Users/USERPC_071019/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149/jre/bin/server;C:/Users/USERPC_071019/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32\WBEM;C:\WINDOWS\system32\WBEM;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\USERPC_071019\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\system32;
+USERNAME=USERPC_071019
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.1320)
+OS uptime: 2 days 21:06 hours
+
+CPU: total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9 microcode 0x21, cx8, cmov, fxsr, ht, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, tsc, tscinvbit, avx, aes, erms, clmul, vzeroupper, clflush
+
+Memory: 4k page, system-wide physical 6029M (738M free)
+TotalPageFile size 7678M (AvailPageFile size 8M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 51M, peak: 147M
+
+vm_info: OpenJDK 64-Bit Server VM (16.0.2+7-67) for windows-amd64 JRE (16.0.2+7-67), built on Jun  8 2021 23:21:43 by "mach5one" with MS VC++ 16.7 (VS2019)
+
+END.
