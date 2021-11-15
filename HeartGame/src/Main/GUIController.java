@@ -48,7 +48,7 @@ public class GUIController extends GUI{
 	
 	public void loginmodestartedwarning() 
 	{
-			Alert alert = new Alert(AlertType.INFORMATION);
+			Alert alert = new Alert(AlertType.WARNING);
 			alert.setTitle("Guest Login Mode");
 			alert.setContentText("Enjoy the game with limited features");
 			alert.show();

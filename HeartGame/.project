@@ -20,4 +20,11 @@
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>image preview</name>
+			<type>1</type>
+			<location>C:/Users/USERPC_071019/Desktop/noimage-420x273.jpg</location>
+		</link>
+	</linkedResources>
 </projectDescription>
