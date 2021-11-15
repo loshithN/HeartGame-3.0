@@ -9,11 +9,9 @@ import javafx.animation.Timeline;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.NodeOrientation;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -21,7 +19,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
-import javafx.scene.image.ImageView;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
@@ -55,15 +52,6 @@ public class DashboardController {
 		  window.show();
 	}
 	
-	public void statisticssbuttonclicked(ActionEvent event) throws IOException 
-	{
-		  root = FXMLLoader.load(getClass().getResource("Statistics.fxml"));
-		  Scene newscene  = new Scene(root);
-		  
-		  Stage window =   (Stage)((Node)event.getSource()).getScene().getWindow();
-		  window.setScene(newscene);
-		  window.show();
-	}
 	
 	/*the code for the "statisticsbuttonclicked" method is adapted from following websites and videos
 	 * 1."https://www.youtube.com/watch?v=za098UQPEGA"
@@ -143,7 +131,7 @@ public class DashboardController {
 	
 	}
 	
-	public void loginwarning() 
+	public void statisticsloginwarning(ActionEvent event) 
 	{
 		Alert alert = new Alert(AlertType.ERROR);
 		alert.setTitle("Guest Mode Warning");
@@ -151,6 +139,43 @@ public class DashboardController {
 		alert.setContentText("Please login to access the all features"+"\n"+"Click okay to show preview");
 		alert.showAndWait().ifPresent(rs -> {
 		    if (rs == ButtonType.OK) {
+		   	    try {
+					root = FXMLLoader.load(getClass().getResource("Statistics.fxml"));
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+				Scene newscene  = new Scene(root);
+				  
+				Stage window =   (Stage)((Node)event.getSource()).getScene().getWindow();
+				window.setScene(newscene);
+				window.show();
+		    	
+		    	
+		    }
+		});
+		
+	}
+	
+	public void settingsloginwarning(ActionEvent event) 
+	{
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setTitle("Guest Mode Warning");
+		alert.setHeaderText("Limited feature");
+		alert.setContentText("Please login to access the all features"+"\n"+"Click okay to show preview");
+		alert.showAndWait().ifPresent(rs -> {
+		    if (rs == ButtonType.OK) {
+		   	    try {
+					root = FXMLLoader.load(getClass().getResource("Settings.fxml"));
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				Scene newscene  = new Scene(root);
+				Stage window =   (Stage)((Node)event.getSource()).getScene().getWindow();
+				window.setScene(newscene);
+				window.show();
 		    	
 		    	
 		    }

@@ -27,7 +27,6 @@ public class GUIController extends GUI{
 		Scene newscene  = new Scene(root);
 		  
 		Stage window =   (Stage)((Node)event.getSource()).getScene().getWindow();
-		window.close();
 		window.setScene(newscene);
 		window.show();
 	}
@@ -60,7 +59,6 @@ public class GUIController extends GUI{
 		  Scene newscene  = new Scene(root);
 		  
 		  Stage window =   (Stage)((Node)event.getSource()).getScene().getWindow();
-		  window.close();
 		  window.setScene(newscene);
 		  window.show();
 	}
@@ -71,7 +69,6 @@ public class GUIController extends GUI{
 		  Scene newscene  = new Scene(root);
 		  
 		  Stage window =   (Stage)((Node)event.getSource()).getScene().getWindow();
-		  window.close();
 		  window.setScene(newscene);
 		  window.show();
 	}
