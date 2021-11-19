@@ -6,14 +6,13 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.DashboardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.GUI.DashboardController">
    <children>
       <Text fill="#4a3c3ca3" layoutX="291.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heart Game 3.0">
          <font>
@@ -21,7 +20,7 @@
          </font>
       </Text>
       <Separator layoutX="2.0" layoutY="64.0" prefHeight="14.0" prefWidth="783.0" />
-      <Button layoutX="246.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="1" />
+      <Button fx:id="answer1" layoutX="246.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="1" />
       <Text fill="#4a3c3ca3" layoutX="312.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick Your Answer?">
          <font>
             <Font name="System Bold" size="20.0" />
@@ -56,7 +55,7 @@
          </font>
       </Text>
       <Separator layoutX="13.0" layoutY="420.0" prefHeight="3.0" prefWidth="166.0" />
-      <TextField editable="false" layoutX="101.0" layoutY="291.0" prefHeight="26.0" prefWidth="81.0" text="0" />
+      <TextField fx:id="currentscore" editable="false" layoutX="101.0" layoutY="291.0" prefHeight="26.0" prefWidth="81.0" text="0" />
       <TextField editable="false" layoutX="101.0" layoutY="363.0" prefHeight="26.0" prefWidth="81.0" text="0" />
       <Separator layoutX="584.0" layoutY="179.0" orientation="VERTICAL" prefHeight="398.0" prefWidth="19.0" />
       <Separator layoutX="603.0" layoutY="419.0" prefHeight="3.0" prefWidth="179.0" />
@@ -161,14 +160,14 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Button layoutX="429.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="4" />
-      <Button layoutX="369.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="3" />
-      <Button layoutX="307.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="2" />
-      <Button layoutX="490.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="5" />
-      <Button layoutX="463.0" layoutY="495.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="9" />
-      <Button layoutX="399.0" layoutY="495.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="8" />
-      <Button layoutX="336.0" layoutY="495.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="7" />
-      <Button layoutX="277.0" layoutY="495.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="6" />
+      <Button fx:id="answer4" layoutX="429.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="4" />
+      <Button fx:id="answer3" layoutX="369.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="3" />
+      <Button fx:id="answer2" layoutX="307.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="2" />
+      <Button fx:id="answer5" layoutX="490.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="5" />
+      <Button fx:id="answer9" layoutX="463.0" layoutY="495.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="9" />
+      <Button fx:id="answer8" layoutX="399.0" layoutY="495.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="8" />
+      <Button fx:id="answer7" layoutX="336.0" layoutY="495.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="7" />
+      <Button fx:id="answer6" layoutX="277.0" layoutY="495.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="6" />
       <Button fx:id="gamestartbutton" layoutX="247.0" layoutY="547.0" mnemonicParsing="false" onAction="#gamestartbuttonclicked" prefHeight="25.0" prefWidth="284.0" text="Start Game" />
       <Text fx:id="countdowntimer" fill="#ffffffa3" layoutX="680.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>
@@ -187,15 +186,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="227.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../Desktop/Breo/CIS/Project/656-6566755_heart-icons-line-heart-icon-png-transparent-png.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="193.0" fitWidth="312.0" layoutX="269.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../Desktop/Q3vyk.png" />
-         </image>
-      </ImageView>
+      <ImageView fx:id="questionarea" fitHeight="206.0" fitWidth="364.0" layoutX="211.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="logo" fitHeight="58.0" fitWidth="61.0" layoutX="221.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

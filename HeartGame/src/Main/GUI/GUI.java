@@ -1,4 +1,4 @@
-package Main;
+package Main.GUI;
 
 import java.io.IOException;
 import javafx.application.Application;
