@@ -23,7 +23,7 @@
       </Text>
       <Separator layoutX="2.0" layoutY="64.0" prefHeight="14.0" prefWidth="783.0" />
       <Separator layoutX="7.0" layoutY="162.0" prefHeight="14.0" prefWidth="783.0" />
-      <Button layoutX="60.0" layoutY="104.0" minWidth="44.0" mnemonicParsing="false" onAction="#backtodashboard" prefHeight="30.0" prefWidth="114.0" text="Return to Game" />
+      <Button defaultButton="true" layoutX="60.0" layoutY="104.0" minWidth="44.0" mnemonicParsing="false" onAction="#backtodashboard" prefHeight="30.0" prefWidth="114.0" text="Return to Game" />
       <Text fill="#4a3c3ca3" layoutX="25.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as" wrappingWidth="95.0">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -73,7 +73,7 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <Button layoutX="691.0" layoutY="23.0" minWidth="44.0" mnemonicParsing="false" onAction="#logoutbuttonclicked" prefHeight="30.0" prefWidth="87.0" text="Logout" />
+      <Button defaultButton="true" layoutX="691.0" layoutY="23.0" minWidth="44.0" mnemonicParsing="false" onAction="#logoutbuttonclicked" prefHeight="30.0" prefWidth="87.0" text="Logout" />
       <Separator layoutX="230.0" layoutY="76.0" orientation="VERTICAL" prefHeight="84.0" prefWidth="12.0" />
       <Separator layoutX="532.0" layoutY="77.0" orientation="VERTICAL" prefHeight="84.0" prefWidth="12.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="36.0" layoutX="23.0" layoutY="194.0" stroke="BLACK" strokeType="INSIDE" width="741.0" />

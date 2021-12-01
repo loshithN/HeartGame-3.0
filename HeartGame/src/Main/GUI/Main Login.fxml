@@ -10,11 +10,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.GUI.GUIController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.GUI.GUIController">
 	<children>
-		<Button layoutX="357.0" layoutY="260.0" mnemonicParsing="false" text="Login" />
-		<Button layoutX="49.0" layoutY="160.0" mnemonicParsing="false" onAction="#guestloginbuttonclicked" prefHeight="25.0" prefWidth="116.0" text="Login" />
-		<Button layoutX="406.0" layoutY="337.0" mnemonicParsing="false" onAction="#signupbuttonclicked" text="Sign Up" />
+		<Button defaultButton="true" layoutX="357.0" layoutY="260.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-border-color: black;" text="Login" />
+		<Button fx:id="guestloginbutton" defaultButton="true" layoutX="49.0" layoutY="160.0" mnemonicParsing="false" onAction="#guestloginbuttonclicked" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: white; -fx-border-color: black;" text="Login" />
+		<Button defaultButton="true" layoutX="406.0" layoutY="337.0" mnemonicParsing="false" onAction="#signupbuttonclicked" style="-fx-background-color: white; -fx-border-color: black;" text="Sign Up" />
 		<Text fill="#4a3c3ca3" layoutX="282.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have a account?">
 			<font>
 				<Font name="System Bold" size="18.0" />

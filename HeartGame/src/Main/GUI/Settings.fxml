@@ -25,7 +25,7 @@
       </Text>
       <Separator layoutX="2.0" layoutY="64.0" prefHeight="14.0" prefWidth="783.0" />
       <Separator layoutX="7.0" layoutY="162.0" prefHeight="14.0" prefWidth="783.0" />
-      <Button layoutX="60.0" layoutY="104.0" minWidth="44.0" mnemonicParsing="false" onAction="#backtodashboard" prefHeight="30.0" prefWidth="114.0" text="Return to Game" />
+      <Button defaultButton="true" layoutX="60.0" layoutY="104.0" minWidth="44.0" mnemonicParsing="false" onAction="#backtodashboard" prefHeight="30.0" prefWidth="114.0" text="Return to Game" />
       <Text fill="#4a3c3ca3" layoutX="23.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as" wrappingWidth="95.0">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -75,7 +75,7 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <Button layoutX="691.0" layoutY="23.0" minWidth="44.0" mnemonicParsing="false" onAction="#logoutbuttonclicked" prefHeight="30.0" prefWidth="87.0" text="Logout" />
+      <Button defaultButton="true" layoutX="691.0" layoutY="23.0" minWidth="44.0" mnemonicParsing="false" onAction="#logoutbuttonclicked" prefHeight="30.0" prefWidth="87.0" text="Logout" />
       <Separator layoutX="532.0" layoutY="77.0" orientation="VERTICAL" prefHeight="84.0" prefWidth="12.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="36.0" layoutX="23.0" layoutY="194.0" stroke="BLACK" strokeType="INSIDE" width="741.0" />
       <Text fill="#000000a3" layoutX="328.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Settings" wrappingWidth="114.0">
@@ -117,14 +117,14 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Button layoutX="680.0" layoutY="339.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="64.0" text="Change" />
+      <Button defaultButton="true" layoutX="680.0" layoutY="339.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="64.0" text="Change" />
       <Text fill="#000000a3" layoutX="59.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alias" wrappingWidth="64.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
       <TextField layoutX="197.0" layoutY="391.0" prefHeight="26.0" prefWidth="125.0" />
-      <Button layoutX="125.0" layoutY="569.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="134.0" text="Save Changes" />
+      <Button defaultButton="true" layoutX="125.0" layoutY="569.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="134.0" text="Save Changes" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="384.0" layoutY="463.0" stroke="BLACK" strokeType="INSIDE" width="380.0" />
       <TableView layoutX="438.0" layoutY="505.0" prefHeight="110.0" prefWidth="200.0">
          <columns>
@@ -138,8 +138,8 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Button layoutX="680.0" layoutY="514.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="64.0" text="Load" />
-      <Button layoutX="680.0" layoutY="554.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="64.0" text="Delete" />
+      <Button defaultButton="true" layoutX="680.0" layoutY="514.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="64.0" text="Load" />
+      <Button defaultButton="true" layoutX="680.0" layoutY="554.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="64.0" text="Delete" />
       <Slider layoutX="194.0" layoutY="295.0" />
       <Slider layoutX="194.0" layoutY="340.0" />
       <Text fill="#000000a3" layoutX="59.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daily Timout" wrappingWidth="64.0">

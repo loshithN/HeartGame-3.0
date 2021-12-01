@@ -12,41 +12,32 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.GUI.DashboardController">
+<AnchorPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="796.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.GUI.DashboardController">
    <children>
-      <Text fill="#4a3c3ca3" layoutX="291.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heart Game 3.0">
+      <Button fx:id="gamestartbutton" defaultButton="true" layoutX="248.0" layoutY="432.0" mnemonicParsing="false" onAction="#gamestartbuttonclicked" prefHeight="113.0" prefWidth="284.0" style="-fx-background-color: white; -fx-border-color: black;" text="Start Game" textAlignment="CENTER" textFill="#4a3c3c">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font></Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="113.0" layoutX="34.0" layoutY="277.0" stroke="#804f4f" strokeType="INSIDE" width="125.0" />
+      <Text fill="#4a3c3ca3" layoutX="311.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heart Game 3.0">
          <font>
             <Font name="System Bold" size="33.0" />
          </font>
       </Text>
       <Separator layoutX="2.0" layoutY="64.0" prefHeight="14.0" prefWidth="783.0" />
-      <Button fx:id="answer1" layoutX="246.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="1" />
-      <Text fill="#4a3c3ca3" layoutX="312.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick Your Answer?">
+      <Button fx:id="answer1" layoutX="246.0" layoutY="487.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: white; -fx-border-color: black;" text="1" />
+      <Text fx:id="answertext" fill="#000000a3" layoutX="264.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick Your Answer?">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
       </Text>
       <Separator layoutX="7.0" layoutY="162.0" prefHeight="14.0" prefWidth="783.0" />
       <Separator layoutX="186.0" layoutY="175.0" orientation="VERTICAL" prefHeight="398.0" prefWidth="12.0" />
-      <Text fill="#4a3c3ca3" layoutX="60.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scoreboard" wrappingWidth="80.548828125">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Text>
-      <Text fill="#4a3c3ca3" layoutX="14.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Score" wrappingWidth="54.0">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Text>
-      <Text fill="#4a3c3ca3" layoutX="14.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Attempts " wrappingWidth="95.0">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Text>
-      <TableView layoutX="27.0" layoutY="468.0" prefHeight="113.0" prefWidth="148.0">
+      <TableView fx:id="leaderboardtable" layoutX="27.0" layoutY="468.0" prefHeight="113.0" prefWidth="148.0">
         <columns>
-          <TableColumn prefWidth="94.0" text="Player Name" />
-          <TableColumn prefWidth="56.0" text="Score" />
+          <TableColumn fx:id="playerid" prefWidth="33.0" text="ID" />
+          <TableColumn fx:id="playername" prefWidth="68.0" text="Name" />
+            <TableColumn fx:id="playerscore" prefWidth="46.0" text="Score" />
         </columns>
       </TableView>
       <Text fill="#4a3c3ca3" layoutX="35.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leaderboard(Top3)" wrappingWidth="131.548828125">
@@ -55,8 +46,6 @@
          </font>
       </Text>
       <Separator layoutX="13.0" layoutY="420.0" prefHeight="3.0" prefWidth="166.0" />
-      <TextField fx:id="currentscore" editable="false" layoutX="101.0" layoutY="291.0" prefHeight="26.0" prefWidth="81.0" text="0" />
-      <TextField editable="false" layoutX="101.0" layoutY="363.0" prefHeight="26.0" prefWidth="81.0" text="0" />
       <Separator layoutX="584.0" layoutY="179.0" orientation="VERTICAL" prefHeight="398.0" prefWidth="19.0" />
       <Separator layoutX="603.0" layoutY="419.0" prefHeight="3.0" prefWidth="179.0" />
       <Text fill="#4a3c3ca3" layoutX="645.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Options" wrappingWidth="95.0">
@@ -64,9 +53,9 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Button fx:id="resumeplaybutton" layoutX="641.0" layoutY="458.0" minWidth="44.0" mnemonicParsing="false" onAction="#gamerepausewarning" prefHeight="30.0" prefWidth="103.0" text="Resume/Play" />
-      <Button fx:id="restartlevelbutton" layoutX="641.0" layoutY="503.0" minWidth="44.0" mnemonicParsing="false" onAction="#gamerestartwarning" prefHeight="30.0" prefWidth="103.0" text="Restart Level" />
-      <Button fx:id="savegamebutton" layoutX="641.0" layoutY="544.0" minWidth="44.0" mnemonicParsing="false" onAction="#sessionsavebuttonclicked" prefHeight="30.0" prefWidth="103.0" text="Save Game" />
+      <Button fx:id="resumeplaybutton" defaultButton="true" layoutX="641.0" layoutY="458.0" minWidth="44.0" mnemonicParsing="false" onAction="#gamerepausewarning" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: white; -fx-border-color: black;" text="Resume/Play" />
+      <Button fx:id="restartlevelbutton" defaultButton="true" layoutX="641.0" layoutY="503.0" minWidth="44.0" mnemonicParsing="false" onAction="#gamerestartwarning" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: white; -fx-border-color: black;" text="Restart Level" />
+      <Button fx:id="savegamebutton" defaultButton="true" layoutX="641.0" layoutY="544.0" minWidth="44.0" mnemonicParsing="false" onAction="#sessionsavebuttonclicked" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: white; -fx-border-color: black;" text="Save Game" />
       <Text fill="#4a3c3ca3" layoutX="606.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select your answer before timer ends" textAlignment="CENTER" wrappingWidth="172.65625">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -77,9 +66,9 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#84919e" height="74.0" layoutX="639.0" layoutY="297.0" stroke="BLACK" strokeType="INSIDE" width="95.0" />
-      <Button fx:id="statisticsbutton" layoutX="17.0" layoutY="132.0" minWidth="44.0" mnemonicParsing="false" onAction="#statisticsloginwarning" prefHeight="30.0" prefWidth="193.0" text="View Game Statistics" />
-      <Button fx:id="settingsbutton" layoutX="17.0" layoutY="90.0" minWidth="44.0" mnemonicParsing="false" onAction="#settingsloginwarning" prefHeight="30.0" prefWidth="193.0" text="View/Change Game Settings" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="74.0" layoutX="639.0" layoutY="297.0" stroke="BLACK" strokeType="INSIDE" width="95.0" />
+      <Button fx:id="statisticsbutton" defaultButton="true" layoutX="17.0" layoutY="132.0" minWidth="44.0" mnemonicParsing="false" onAction="#statisticsloginwarning" prefHeight="30.0" prefWidth="193.0" style="-fx-background-color: white; -fx-border-color: silver;" text="View Game Statistics" />
+      <Button fx:id="settingsbutton" layoutX="17.0" layoutY="90.0" minWidth="44.0" mnemonicParsing="false" mouseTransparent="true" onAction="#settingsloginwarning" prefHeight="30.0" prefWidth="193.0" style="-fx-background-color: white; -fx-border-color: silver;" text="View/Change Game Settings" />
       <Text fill="#4a3c3ca3" layoutX="21.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as" wrappingWidth="95.0">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -87,7 +76,7 @@
       </Text>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="215.0" layoutX="206.0" layoutY="190.0" stroke="BLACK" strokeType="INSIDE" width="374.0">
         </Rectangle>
-      <TextField fx:id="usernametextfield" alignment="CENTER" editable="false" layoutX="114.0" layoutY="25.0" prefHeight="14.0" prefWidth="81.0" text="username" />
+      <TextField fx:id="usernametextfield" alignment="CENTER" editable="false" layoutX="114.0" layoutY="25.0" prefHeight="14.0" prefWidth="81.0" />
       <Text fill="#000000a3" layoutX="337.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player Statistics" wrappingWidth="114.0">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -98,7 +87,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Text fill="#4a3c3ca3" layoutX="351.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Best Score" wrappingWidth="80.548828125">
+      <Text fill="#4a3c3ca3" layoutX="351.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Score" wrappingWidth="80.548828125">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -108,9 +97,9 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <TextField fx:id="stopwatch" alignment="CENTER" editable="false" layoutX="259.0" layoutY="129.0" prefHeight="26.0" prefWidth="54.0" text="0" />
-      <TextField alignment="CENTER" editable="false" layoutX="358.0" layoutY="129.0" prefHeight="26.0" prefWidth="54.0" text="0" />
-      <TextField alignment="CENTER" editable="false" layoutX="458.0" layoutY="129.0" prefHeight="26.0" prefWidth="54.0" text="0" />
+      <TextField fx:id="timertext" alignment="CENTER" editable="false" layoutX="252.0" layoutY="129.0" prefHeight="26.0" prefWidth="81.0" text="0" />
+      <TextField fx:id="gamescore" alignment="CENTER" editable="false" layoutX="349.0" layoutY="129.0" prefHeight="26.0" prefWidth="81.0" text="0" />
+      <TextField alignment="CENTER" editable="false" layoutX="444.0" layoutY="129.0" prefHeight="26.0" prefWidth="81.0" text="0" />
       <Text fill="#000000a3" layoutX="624.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Statistics" wrappingWidth="114.0">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -127,10 +116,10 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <ProgressBar layoutX="686.0" layoutY="111.0" prefHeight="14.0" prefWidth="95.0" progress="0.0" />
-      <ProgressBar layoutX="686.0" layoutY="135.0" prefHeight="14.0" prefWidth="95.0" progress="0.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#84919e" height="37.0" layoutX="617.0" layoutY="195.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
-      <Text fx:id="question_no" fill="#ffffffa3" layoutX="633.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+      <ProgressBar fx:id="levelprogressbar" layoutX="686.0" layoutY="111.0" prefHeight="14.0" prefWidth="95.0" progress="0.0" />
+      <ProgressBar fx:id="gameprogressbar" layoutX="686.0" layoutY="135.0" prefHeight="14.0" prefWidth="95.0" progress="0.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="37.0" layoutX="617.0" layoutY="195.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
+      <Text fx:id="question_no" fill="#000000a3" layoutX="627.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="25.0">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
@@ -145,48 +134,40 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#84919e" height="37.0" layoutX="729.0" layoutY="195.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
-      <Text fx:id="total_questions" fill="#ffffffa3" layoutX="745.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="37.0" layoutX="729.0" layoutY="195.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
+      <Text fx:id="total_questions" fill="#000000a3" layoutX="739.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="24.7333984375">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <Button layoutX="691.0" layoutY="23.0" minWidth="44.0" mnemonicParsing="false" onAction="#logoutbuttonclicked" prefHeight="30.0" prefWidth="87.0" text="Logout" />
+      <Button layoutX="691.0" layoutY="23.0" minWidth="44.0" mnemonicParsing="false" onAction="#logoutbuttonclicked" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: white; -fx-border-color: silver;" text="Logout" />
       <Separator layoutX="230.0" layoutY="76.0" orientation="VERTICAL" prefHeight="84.0" prefWidth="12.0" />
       <Separator layoutX="532.0" layoutY="77.0" orientation="VERTICAL" prefHeight="84.0" prefWidth="12.0" />
-      <TextField alignment="CENTER" editable="false" layoutX="580.0" layoutY="34.0" prefHeight="26.0" prefWidth="67.0" text="0" />
-      <Text fill="#4a3c3ca3" layoutX="570.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daily Timeout" wrappingWidth="95.0">
+      <Button fx:id="answer4" layoutX="429.0" layoutY="487.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: white; -fx-border-color: black;" text="4" />
+      <Button fx:id="answer3" layoutX="369.0" layoutY="487.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: white; -fx-border-color: black;" text="3" />
+      <Button fx:id="answer2" layoutX="307.0" layoutY="487.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: white; -fx-border-color: black;" text="2" />
+      <Button fx:id="answer5" layoutX="490.0" layoutY="487.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: white; -fx-border-color: black;" text="5" />
+      <Button fx:id="answer9" layoutX="463.0" layoutY="533.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: white; -fx-border-color: black;" text="9" />
+      <Button fx:id="answer8" layoutX="399.0" layoutY="533.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: white; -fx-border-color: black;" text="8" />
+      <Button fx:id="answer7" layoutX="336.0" layoutY="533.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: white; -fx-border-color: black;" text="7" />
+      <Button fx:id="answer6" layoutX="277.0" layoutY="533.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: white; -fx-border-color: black;" text="6" />
+      <Text fx:id="countdowntimer" fill="#000000a3" layoutX="660.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="54.0">
          <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Text>
-      <Button fx:id="answer4" layoutX="429.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="4" />
-      <Button fx:id="answer3" layoutX="369.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="3" />
-      <Button fx:id="answer2" layoutX="307.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="2" />
-      <Button fx:id="answer5" layoutX="490.0" layoutY="449.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="5" />
-      <Button fx:id="answer9" layoutX="463.0" layoutY="495.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="9" />
-      <Button fx:id="answer8" layoutX="399.0" layoutY="495.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="8" />
-      <Button fx:id="answer7" layoutX="336.0" layoutY="495.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="7" />
-      <Button fx:id="answer6" layoutX="277.0" layoutY="495.0" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="44.0" text="6" />
-      <Button fx:id="gamestartbutton" layoutX="247.0" layoutY="547.0" mnemonicParsing="false" onAction="#gamestartbuttonclicked" prefHeight="25.0" prefWidth="284.0" text="Start Game" />
-      <Text fx:id="countdowntimer" fill="#ffffffa3" layoutX="680.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-         <font>
-            <Font name="System Bold" size="21.0" />
+            <Font name="System Bold" size="41.0" />
          </font>
       </Text>
       <Separator layoutX="12.0" layoutY="251.0" prefHeight="3.0" prefWidth="166.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#84919e" height="37.0" layoutX="109.0" layoutY="195.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
-      <Text fx:id="level_text" fill="#ffffffa3" layoutX="125.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+      <Text fx:id="level_text" fill="#000000a3" layoutX="83.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="24.7333984375">
          <font>
-            <Font name="System Bold" size="21.0" />
+            <Font name="System Bold" size="50.0" />
          </font>
       </Text>
-      <Text fill="#e31414a3" layoutX="35.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level" textAlignment="CENTER" wrappingWidth="67.0">
+      <Text fill="#e31414a3" layoutX="45.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level" textAlignment="CENTER" wrappingWidth="103.0">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="38.0" />
          </font>
       </Text>
       <ImageView fx:id="questionarea" fitHeight="206.0" fitWidth="364.0" layoutX="211.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="logo" fitHeight="58.0" fitWidth="61.0" layoutX="221.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="logo" fitHeight="58.0" fitWidth="61.0" layoutX="247.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

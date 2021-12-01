@@ -31,5 +31,10 @@
 			<type>1</type>
 			<location>C:/Users/USERPC_071019/Desktop/Breo/CIS/Project/656-6566755_heart-icons-line-heart-icon-png-transparent-png.png</location>
 		</link>
+		<link>
+			<name>src/Main/GUI/preview.png</name>
+			<type>1</type>
+			<location>C:/Users/USERPC_071019/Desktop/Breo/CIS/Project/preview.png</location>
+		</link>
 	</linkedResources>
 </projectDescription>

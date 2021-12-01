@@ -9,7 +9,10 @@ import Main.Server.*;
  * Basic functionality
  */
 public class GameEngine {
+	
+	
 	String thePlayer = null;
+	String time;
 
 	/**
 	 * Each player has their own game engine.
@@ -21,6 +24,9 @@ public class GameEngine {
 	}
 
 	int counter = 0;
+	int level = 0;
+	int leaderboard=0;
+	int questionsanswered=0;
 	int score = 0; 
 	GameServer theGames = new GameServer(); 
 	Game current = null; 
@@ -38,6 +44,30 @@ public class GameEngine {
 			} 
 		
 	}
+	
+	
+	
+
+	public int getCounter() {
+		return counter;
+	}
+
+
+
+
+	public void setCounter(int counter) {
+		this.counter = counter;
+	}
+
+
+
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+
+
 
 	/**
 	 * Checks if the parameter i is a solution to the game URL. If so, score is increased by one. 

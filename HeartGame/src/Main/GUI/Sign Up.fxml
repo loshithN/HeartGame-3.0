@@ -47,7 +47,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <PasswordField layoutX="255.0" layoutY="280.0" />
+      <PasswordField fx:id="passwordfield" layoutX="255.0" layoutY="280.0" />
       <CheckBox disable="true" layoutX="433.0" layoutY="234.0" mnemonicParsing="false" text="Availability" textFill="#4a3c3c" textOverrun="CLIP" wrapText="true" />
       <CheckBox disable="true" layoutX="433.0" layoutY="199.0" mnemonicParsing="false" text="Availability" textFill="#4a3c3c" textOverrun="CLIP" wrapText="true" />
       <Separator layoutX="51.0" layoutY="132.0" prefHeight="3.0" prefWidth="499.0" />
@@ -56,15 +56,15 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <PasswordField layoutX="255.0" layoutY="320.0" />
+      <PasswordField fx:id="confirmpasswordfield" layoutX="255.0" layoutY="320.0" />
       <CheckBox disable="true" layoutX="433.0" layoutY="320.0" mnemonicParsing="false" text="Availability" textFill="#4a3c3c" textOverrun="CLIP" wrapText="true" />
-      <PasswordField layoutX="255.0" layoutY="234.0" />
-      <PasswordField layoutX="255.0" layoutY="195.0" />
-      <PasswordField layoutX="255.0" layoutY="160.0" />
+      <PasswordField fx:id="usernamefield" layoutX="255.0" layoutY="234.0" />
+      <PasswordField fx:id="aliasfield" layoutX="255.0" layoutY="195.0" />
+      <PasswordField fx:id="namefield" layoutX="255.0" layoutY="160.0" />
       <Button layoutX="-107.0" layoutY="88.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="269.0" layoutY="387.0" mnemonicParsing="false" text="Register New User" />
+      <Button fx:id="reguserbutton" defaultButton="true" layoutX="269.0" layoutY="387.0" mnemonicParsing="false" text="Register New User" />
       <ProgressBar layoutX="490.0" layoutY="284.0" prefHeight="18.0" prefWidth="79.0" progress="0.0" />
-      <Button layoutX="21.0" layoutY="100.0" mnemonicParsing="false" onAction="#backtologinbutton" text="Back To Login Page" />
+      <Button defaultButton="true" layoutX="21.0" layoutY="100.0" mnemonicParsing="false" onAction="#backtologinbutton" text="Back To Login Page" />
       <ImageView fx:id="signuplogo" fitHeight="64.0" fitWidth="60.0" layoutX="133.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
